@@ -126,10 +126,43 @@ public class TriCroissantConcreteStrategy implements TriStrategy {
 ```
 
 
-**Exemples 1**
+**Exemples 2**
 > Dans ce programme, une personne peut se déplacer de plusieurs façon différentes.
 
 ```java
+public class StrategyAeroport {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+          // Création du contexte
+          Personne personne1 = new Personne("AvecUnA", "kAren");
+              
+          // ici on défini la stratégie (le moyen de déplacement) à utiliser
+          int a = 0 ;
+          if (a == 1){
+                personne1.choisirModeDeplacement(new EnVoitureConcreteStrategy());
+          } else {
+                personne1.choisirModeDeplacement(new EnAvionConcreteStrategy());
+          }
+          
+          // L'appel sera toujours le même pourtant le code effectué derrière sera différent
+          // (l'action sera toujours la même, mais la façon de la faire peut varier)
+          personne1.seDeplacer();
+   
+          // création d'une nouvelle personne
+          Personne personne2 = new Personne("Kostic", "Julien");
+          personne2.choisirModeDeplacement(new EnVoitureConcreteStrategy());
+          personne2.seDeplacer();
+          
+          // change le mode déplacement
+          personne2.choisirModeDeplacement(new EnAvionConcreteStrategy());
+          personne2.seDeplacer();
+    } // end main
+}
+
 ```
 
 **On constate que nous appelons toujours la même méthode dans le main, cependant c'est un autre algorithme qui est utilisé.**
