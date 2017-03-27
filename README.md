@@ -29,6 +29,7 @@ La page est longue car à la fin il y a des exemples de codes.
 
 > Ici il y aura plusieurs façon de trier un classement.
 
+Le programme principal ⤵️
 ```java
 import java.util.Arrays;
 public class StrategyClassement {
@@ -62,6 +63,7 @@ if( i < 1 ){
 }
 ```
 
+Le contexte ⤵️
 ```java
 public class Classement {
      private TriStrategy methodeTri;
@@ -92,7 +94,7 @@ public interface TriStrategy {
     public int[] trier(int[] tableau);  
 }
 ```
-
+Une stratégie ⤵️
 ```java
 import java.util.Arrays;
 public class TriDecroissantConcreteStrategy implements TriStrategy{
@@ -112,6 +114,7 @@ public class TriDecroissantConcreteStrategy implements TriStrategy{
 }
 ```
 
+Une autre stratégie ⤵️
 ```java
 import java.util.Arrays;
 public class TriCroissantConcreteStrategy implements TriStrategy {  
@@ -129,6 +132,7 @@ public class TriCroissantConcreteStrategy implements TriStrategy {
 
 > Dans ce programme, une personne peut se déplacer de plusieurs façon différentes.
 
+Le programme principal ⤵️
 ```java
 public class StrategyAeroport {
 
@@ -195,6 +199,7 @@ public interface DeplacementStrategy {
 }
 ```
 
+Une stratégie ⤵️
 ```java
 /**
  * Simulation d'un déplacement en avion
@@ -204,13 +209,12 @@ public class EnAvionConcreteStrategy implements DeplacementStrategy{
 
     @Override
     public void seDeplace() {
-
-        System.out.println("Je suis dans leeees nuuuuuaaaaaageeeees.");
-        
+        System.out.println("Je suis dans leeees nuuuuuaaaaaageeeees.");  
     }
-    
 }
 ```
+
+Une autre stratégie ⤵️
 ```java
 /**
  * Simulation d'un déplacement en voiture
@@ -220,13 +224,11 @@ public class EnVoitureConcreteStrategy implements DeplacementStrategy{
 
     @Override
     public void seDeplace() {
-
         System.out.println("vroum vroum vroum vroum vroum");
-    
-    }
-    
+    } 
 }
 ```
 **On constate que nous appelons toujours la même méthode dans le main, cependant c'est un autre algorithme qui est utilisé.**
 
-**Les projets et le pdf de ce documents sont sur le drive. Bises.**
+```java
+Les projets et le pdf de ce documents sont sur le drive. Bises.```
