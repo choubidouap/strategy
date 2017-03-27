@@ -24,7 +24,7 @@ La page est longue car à la fin il y a des exemples de codes.
 --------
 **Diagramme de séquence**
 ![diagramme de séquence du poids mouche](https://image.noelshack.com/fichiers/2017/13/1490610078-strategysequencediagram.png)
--------
+--------
 **Exemples**
 
 Classement
