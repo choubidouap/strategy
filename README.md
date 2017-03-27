@@ -15,13 +15,13 @@ La page est longue car à la fin il y a des exemples de codes.
 
 - **Données extrinsèques**: ne dépendent pas de l'objet en question
 
-** Quand utiliser ce design pattern ?**
+**Quand utiliser ce design pattern ?**
 > Lorsque que nous avons besoin de permuter dynamiquement entre algorithmes, il serait judicieux d'implémenter ce design pattern. 
 
-** Application **
+**Application**
 > Quelconque application proposant réalisation d'une tâche de différentes manières.
 
-** Diagramme de séquence **
+**Diagramme de séquence**
 ![diagramme de séquence du poids mouche](https://image.noelshack.com/fichiers/2017/13/1490610078-strategysequencediagram.png)
 
 Exemple: **Les Strings**
@@ -69,5 +69,8 @@ public class PoidsMoucheString {
 
 --------
 
+```java
+// commentaires
+```
 
 **Les projets et le pdf de ce documents sont sur le drive. Bises.**
