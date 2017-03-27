@@ -25,7 +25,7 @@ La page est longue car à la fin il y a des exemples de codes.
 **Diagramme de séquence**
 ![diagramme de séquence du poids mouche](https://image.noelshack.com/fichiers/2017/13/1490610078-strategysequencediagram.png)
 --------
-**Exemples**
+**Exemples 1**
 
 Classement
 
@@ -87,7 +87,7 @@ public class Classement {
     
 }
 ```
-L'interface
+L'interface ⤵️
 ```java
 public interface TriStrategy {
     public int[] trier(int[] tableau);  
@@ -126,8 +126,12 @@ public class TriCroissantConcreteStrategy implements TriStrategy {
 ```
 
 
+**Exemples 1**
+> Dans ce programme, une personne peut se déplacer de plusieurs façon différentes.
+
 ```java
 ```
 
+**On constate que nous appelons toujours la même méthode dans le main, cependant c'est un autre algorithme qui est utilisé.**
 
 **Les projets et le pdf de ce documents sont sur le drive. Bises.**
