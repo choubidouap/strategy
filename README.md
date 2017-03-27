@@ -231,4 +231,5 @@ public class EnVoitureConcreteStrategy implements DeplacementStrategy{
 **On constate que nous appelons toujours la même méthode dans le main, cependant c'est un autre algorithme qui est utilisé.**
 
 ```java
-Les projets et le pdf de ce documents sont sur le drive. Bises.```
+Les projets et le pdf de ce document sont sur le drive. Bises.
+```
