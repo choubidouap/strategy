@@ -25,9 +25,7 @@ La page est longue car à la fin il y a des exemples de codes.
 **Diagramme de séquence**
 ![diagramme de séquence du poids mouche](https://image.noelshack.com/fichiers/2017/13/1490610078-strategysequencediagram.png)
 --------
-**Exemples 1**
-
-Classement
+**Exemples 1 - Tri de classement**
 
 > Ici il y aura plusieurs façon de trier un classement.
 
@@ -47,7 +45,8 @@ public class StrategyClassement {
             
             // définition de quel stratégie (ici méthode de tri) utiliser
             int i = 0;
-            if( i < 1 ){
+
+if( i < 1 ){
                 monClassement.definirMethodeTri(new TriCroissantConcreteStrategy());
             } else {
                 monClassement.definirMethodeTri(new TriDecroissantConcreteStrategy());
@@ -126,7 +125,8 @@ public class TriCroissantConcreteStrategy implements TriStrategy {
 ```
 
 
-**Exemples 2**
+**Exemples 2 - Mode de déplacement**
+
 > Dans ce programme, une personne peut se déplacer de plusieurs façon différentes.
 
 ```java
@@ -162,9 +162,71 @@ public class StrategyAeroport {
           personne2.seDeplacer();
     } // end main
 }
-
 ```
 
+Le contexte ⤵️
+```java
+public class Personne {
+    private DeplacementStrategy modeDeDeplacement;
+    public String nom;
+    public String prenom;
+    
+    public Personne(String nom, String prenom){
+        this.nom = nom ;
+        this.prenom = prenom ;
+    }
+    
+    public void choisirModeDeplacement(DeplacementStrategy leModeDeDeplacementChoisi){
+        this.modeDeDeplacement = leModeDeDeplacementChoisi;
+    }
+    
+    public void seDeplacer(){
+        this.modeDeDeplacement.seDeplace();
+    }
+}
+```
+
+L'interface ⤵️
+```java
+public interface DeplacementStrategy {
+    
+    public void seDeplace();
+    
+}
+```
+
+```java
+/**
+ * Simulation d'un déplacement en avion
+ * @author choubidouap
+ */
+public class EnAvionConcreteStrategy implements DeplacementStrategy{
+
+    @Override
+    public void seDeplace() {
+
+        System.out.println("Je suis dans leeees nuuuuuaaaaaageeeees.");
+        
+    }
+    
+}
+```
+```java
+/**
+ * Simulation d'un déplacement en voiture
+ * @author choubidouap
+ */
+public class EnVoitureConcreteStrategy implements DeplacementStrategy{
+
+    @Override
+    public void seDeplace() {
+
+        System.out.println("vroum vroum vroum vroum vroum");
+    
+    }
+    
+}
+```
 **On constate que nous appelons toujours la même méthode dans le main, cependant c'est un autre algorithme qui est utilisé.**
 
 **Les projets et le pdf de ce documents sont sur le drive. Bises.**
