@@ -63,4 +63,71 @@ public class StrategyClassement {
 }
 ```
 
+```java
+public class Classement {
+     private TriStrategy methodeTri;
+     int[] tableauClassement = new int[20];   
+    
+    public Classement(){}
+
+    public void definirMethodeTri(TriStrategy  typeTriChoisi){
+        this.methodeTri = typeTriChoisi;
+    }
+      
+    public void trier(int[] tableau){
+        methodeTri.trier(tableau);
+    }
+
+    void peuplerClassement(int maximum) {
+        // peuple de chiffres aléatoires le tableau
+        for ( int a = 0 ; a < this.tableauClassement.length ; a ++){
+            this.tableauClassement[a] = (int)(Math.random()*maximum);
+        }     
+    }
+    
+}
+```
+L'interface
+```java
+public interface TriStrategy {
+    public int[] trier(int[] tableau);  
+}
+```
+
+```java
+import java.util.Arrays;
+public class TriDecroissantConcreteStrategy implements TriStrategy{
+
+    @Override
+    public int[] trier(int[] tableau) {
+        System.out.println("Tri décroissant");
+        Arrays.sort(tableau);
+        for(int i = 0; i < tableau.length / 2; i++)
+        {
+            int temp = tableau[i];
+            tableau[i] = tableau[tableau.length - i - 1];
+            tableau[tableau.length - i - 1] = temp;
+        }     
+        return tableau;
+    }
+}
+```
+
+```java
+import java.util.Arrays;
+public class TriCroissantConcreteStrategy implements TriStrategy {  
+    @Override
+    public int[] trier(int[] tableau) {
+        System.out.println("Tri Croissant");
+        Arrays.sort(tableau);
+        return tableau;
+    }
+}
+```
+
+
+```java
+```
+
+
 **Les projets et le pdf de ce documents sont sur le drive. Bises.**
